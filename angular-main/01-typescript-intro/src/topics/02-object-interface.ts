@@ -1,7 +1,7 @@
 
 const skills : string[] = ['Bash','Counter', 'Healing'];
 
-interface Personaje {
+export interface Personaje {
     name : string;
     hp: number;
     skills: string[];
