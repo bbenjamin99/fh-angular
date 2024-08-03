@@ -1,29 +1,19 @@
 
 export class Person {
 
-    private name? : string;
-    private address?: string;
    
-    constructor(){
-    }
-
-    public setName(name:string){
-        this.name = name;
-    }
-    public getName(){
-        return this.name;
-    }
-
-    public setAddress(address: string){
+    constructor( public name?: string, public address?: string){
+        this.name= name;
         this.address = address;
-    }
-    public getAddress(){
-        return this.address;
     }
 }
 
-const ironMan = new Person();
-    ironMan.setName("Benito");
-    ironMan.setAddress("Camelas")
-console.log(ironMan.getName());
-console.log(ironMan.getAddress());
+export class Hero extends Person {
+    constructor(public alterEgo: string, public age : number, public realName :string) {
+        super(realName, 'New York');
+    }
+}
+
+
+const ironMan = new Hero('Iron Man', 45, 'Tony Stark');
+console.log(ironMan);
