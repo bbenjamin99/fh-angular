@@ -2,18 +2,28 @@
 export class Person {
 
    
-    constructor( public name?: string, public address?: string){
-        this.name= name;
+    constructor( public firstname?: string,public lastname? : string, public address?: string){
+        this.firstname= firstname;
+        this.lastname = lastname;
         this.address = address;
     }
 }
 
-export class Hero extends Person {
-    constructor(public alterEgo: string, public age : number, public realName :string) {
-        super(realName, 'New York');
+// export class Hero extends Person {
+//     constructor(public alterEgo: string, public age : number, public realName :string) {
+//         super(realName, 'New York');
+//     }
+// }
+
+export class Hero {
+
+    constructor(public alterEgo: string,
+                public age : number, 
+                public realName :string,
+                public person : Person) {
     }
 }
 
-
-const ironMan = new Hero('Iron Man', 45, 'Tony Stark');
+const tony = new Person('Tony','Stark', 'New York');
+const ironMan = new Hero('Iron Man', 45, 'Tony Stark', tony);
 console.log(ironMan);
