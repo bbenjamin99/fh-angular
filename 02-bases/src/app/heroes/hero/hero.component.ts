@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-heroes-hero',
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.css'
+})
+export class HeroComponent {
+  public title :string = "Heroes App";
+
+  public name: string = "Iron Man";
+  public age : number = 45;
+  
+
+}

@@ -12,8 +12,8 @@ import { Component } from "@angular/core";
   `
 })
 export class CounterComponent {
-
-  counter : number = 0;
+  
+  counter : number = 10;
   public sumarRestar(value :number ): void {
     this.counter += value;
   }
