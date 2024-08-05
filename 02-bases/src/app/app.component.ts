@@ -7,13 +7,7 @@ import { CounterComponent } from './counter/counter.component';
 })
 export class AppComponent {
   public title : string = 'Hello world from Angular!';
-  public counter : number = 10;
 
-   sumarRestar(value : number):void {
-    this.counter += value;
-  };
-   reset() : void {
-    this.counter = 10;
   }
 
-}
+
