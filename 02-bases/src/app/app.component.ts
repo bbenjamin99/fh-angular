@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
-
+import { CounterComponent } from './counter/counter.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'bases';
+  public title : string = 'Hello world from Angular!';
+  public counter : number = 10;
+
+   sumarRestar(value : number):void {
+    this.counter += value;
+  };
+   reset() : void {
+    this.counter = 10;
+  }
+
 }
