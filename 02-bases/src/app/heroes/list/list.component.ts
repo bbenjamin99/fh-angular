@@ -14,5 +14,13 @@ export class ListComponent {
       this.deletedHeroes = this.heroNames.pop();
   }
 
+  removeFirstHero() : void {
+    this.deletedHeroes = this.heroNames.shift();
+  }
+
+  resetHeroes() : void {
+    this.heroNames = ['Spiderman', 'Iron Man', 'Hulk', 'Thor'];
+  }
+
 
 }
