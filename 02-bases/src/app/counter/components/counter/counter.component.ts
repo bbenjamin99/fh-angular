@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: 'app-counter',
-  template:
-  `
+  template:`
   <h1>Hello from this component</h1>
   <h3>counter : {{counter}}</h3>
   <button (click)="sumarRestar(+1)">+1</button>
@@ -11,6 +10,7 @@ import { Component } from "@angular/core";
   <button (click)="reset()">Reset</button>
   `
 })
+
 export class CounterComponent {
   
   counter : number = 10;

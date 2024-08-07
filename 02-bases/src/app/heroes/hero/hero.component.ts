@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgModel } from '@angular/forms';
+
 
 @Component({
   selector: 'app-heroes-hero',
@@ -11,6 +11,7 @@ export class HeroComponent {
 
   public name: string = "Iron Man";
   public age : number = 45;
+  
   get capitalizedName() : string{
     return this.name.toUpperCase();
   }
