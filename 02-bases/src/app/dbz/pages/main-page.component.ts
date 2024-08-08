@@ -9,13 +9,13 @@ import { Employ } from "../interfaces/employ.interface";
 
 
 export class MainPageComponent {
-    
+
     public employees : Employ[]  = [{
-        name: "Benjamin", id: 1},
-    {   name:"Micaela",id:2},
-    {name: "Ricardito", id:3},
-    {name: "Rockito", id:4},
+        name: "Benjamin", legajo: 20002},
+    {   name:"Micaela",legajo:20010},
+    {name: "Ricardito", legajo:20011},
+    {name: "Rockito", legajo:200014},
 
 ];
-    
+
 }

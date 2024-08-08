@@ -1,7 +1,19 @@
 <h4>Listado</h4>
         <ul class="list-group" >
-            <li class="list-group-item" *ngFor="let employ of employList">
-              <strong>ID:</strong> {{employ.id}} - <strong>Nombre:</strong> {{employ.name}}
+            <li *ngFor="
+            let employ of employList;
+            let i = index;
+            let isFirst = first;
+            let isLast = last;
+            let isEven = even;
+            let isOdd = odd;"
+            class="list-group-item"
+            [ngClass]="{'list-group-item-success' : isLast,
+             'list-group-item-primary' : isEven}">
+              <span></span>
+             <strong> ID: </strong>  <span class="text-primary">{{i + 1}}</span> -
+             <strong> Legajo: </strong>{{employ.legajo}} -
+             <strong> Nombre: </strong> <span>{{employ.name}}</span>
             </li>
-           
+
         </ul>

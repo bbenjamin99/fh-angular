@@ -7,13 +7,13 @@ import { Employ } from '../../interfaces/employ.interface';
   templateUrl: './list.component.html',
 })
 
-export class ListComponent { 
+export class ListComponent {
 
   @Input()
   public employList : Employ[] = [
-    {name:"Benja", id:1},
-    {name:"Mica", id:2},
-    {name:"Rocky", id:3},
+    {name:"Benja", legajo:1},
+    {name:"Mica", legajo:2},
+    {name:"Rocky", legajo:3},
   ]
 
 }
