@@ -1,9 +1,19 @@
-import { CommonModule } from '@angular/common';
-import {Component } from '@angular/core';
+
+import {Component, Input } from '@angular/core';
+import { Employ } from '../../interfaces/employ.interface';
 
 @Component({
-  selector: 'app-dbz-list',
+  selector: 'dbz-list',
   templateUrl: './list.component.html',
 })
 
-export class ListComponent { }
+export class ListComponent { 
+
+  @Input()
+  public employList : Employ[] = [
+    {name:"Benja", id:1},
+    {name:"Mica", id:2},
+    {name:"Rocky", id:3},
+  ]
+
+}
