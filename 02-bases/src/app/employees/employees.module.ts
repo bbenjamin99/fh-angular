@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainPageComponent } from './pages/main-page.components';
-import { ListEmployeesComponent } from './components/list/list-employees.components';
-import { AddEmployComponent } from './components/add-employ/add-employ.components';
+
+import { MainPageComponent } from './pages/main-page.component';
+
+import { AddEmployComponent } from './components/add-employ/add-employ.component';
+import { ListEmployeesComponent } from './components/list/list-employees.component';
+
 
 
 @NgModule({
