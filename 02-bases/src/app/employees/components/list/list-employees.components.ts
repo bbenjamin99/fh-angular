@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Employ } from "../../interfaces/employ.interface";
 
 
 @Component({
@@ -8,5 +9,9 @@ import { Component } from "@angular/core";
 
 
 export class ListEmployeesComponent {
-    title : string = "Hello!";
+    @Input()
+    public listEmployees : Employ[] = [{
+      nombre: "Benjamin", sector: "Administración", dni: 42536814
+    }];
+
 }
