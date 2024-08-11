@@ -1,5 +1,4 @@
 
-
 export interface Employ {
     nombre: string,
     sector: string,

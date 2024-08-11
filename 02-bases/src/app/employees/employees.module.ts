@@ -13,7 +13,7 @@ import { AddEmployComponent } from './components/add-employ/add-employ.component
   ],
   exports: [
     MainPageComponent,
-    
+
   ],
   imports: [
     CommonModule

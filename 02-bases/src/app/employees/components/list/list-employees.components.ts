@@ -9,6 +9,7 @@ import { Employ } from "../../interfaces/employ.interface";
 
 
 export class ListEmployeesComponent {
+
     @Input()
     public listEmployees : Employ[] = [{
       nombre: "Benjamin", sector: "Administración", dni: 42536814
