@@ -1,8 +1,11 @@
 <h4>Agregar Empleado</h4>
-<form class="row">
-    <input type="text" class="form-control mb-2" placeholder="Nombre">
-    <input type="text" class="form-control mb-2" placeholder="Sector">
-    <input type="number" class="form-control mb-2" placeholder="DNI">
+<form class="row" (ngSubmit)="emitEmploy()">
+    
+    <input type="text" name="nombre"  [(ngModel)]="employ.nombre" class="form-control mb-2" placeholder="Nombre">
+    <input type="text" name="sector"  [(ngModel)]="employ.sector" class="form-control mb-2" placeholder="Sector">
+    <input type="number" name="dni" [(ngModel)]="employ.dni"  class="form-control mb-2" placeholder="DNI">
     
     <button class="btn btn-primary" type="submit">Agregar</button>
+
+    <!-- <pre>{{employ | json}}</pre> -->
 </form>

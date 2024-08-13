@@ -4,11 +4,13 @@
 
 <div class="row">
     <div class="col">
-        <list-employees [listEmployees]="employees"></list-employees>
+        <list-employees
+         (onDelete)="onDeleteEmploy($event)" 
+         [listEmployees]="employees"></list-employees>
 </div>
 
     <div class="col">
 
-      <add-employ></add-employ>
+      <add-employ (onNewEmploy)="onNewEmploy($event)" ></add-employ>
     </div>
 </div>

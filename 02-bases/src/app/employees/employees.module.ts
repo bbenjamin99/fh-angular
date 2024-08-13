@@ -5,6 +5,7 @@ import { MainPageComponent } from './pages/main-page.component';
 
 import { AddEmployComponent } from './components/add-employ/add-employ.component';
 import { ListEmployeesComponent } from './components/list/list-employees.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { ListEmployeesComponent } from './components/list/list-employees.compone
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class EmployeesModule { }

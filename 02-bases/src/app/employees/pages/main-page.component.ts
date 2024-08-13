@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { EmployeesService } from "../services/employees.service";
 import { Employ } from "../interfaces/employ.interface";
 
 
@@ -9,13 +10,20 @@ import { Employ } from "../interfaces/employ.interface";
 
 export class MainPageComponent {
 
-    public employees : Employ[] = [
-    {nombre: "Benjamin", sector: "Administración", dni: 42536814},
-    {nombre: "Usuario2", sector: "Caja", dni: 42452132},
-    {nombre: "Usuario3", sector: "Vendedor", dni: 2528342},
-    {nombre: "Usuario4", sector: "Repositor", dni: 2528342},
+  constructor( private employeesServices : EmployeesService){
+  }
+  
+  get employees() : Employ[] {
+    return [...this.employeesServices.employees];
+  }
 
-  ];
+  onDeleteEmploy(id : string):void {
+    this.employeesServices.deleteEmployById(id);
+  }
+
+  onNewEmploy(employ : Employ): void{
+    this.employeesServices.addEmploy(employ);
+  }
 
 
-}
+} 

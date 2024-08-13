@@ -1,19 +1,30 @@
-<h4>Listado</h4>
+
+    <h3 *ngIf="listEmployees.length == 0 ; else employs" >No hay empleados para mostrar...</h3>
+  <ng-template #employs>
+    <h4>Listado de empleados</h4>
 
     <ul class="list-group">
+
 
         <li *ngFor="let employ of listEmployees;
         let i = index;
         let isLast = last;
         let isFirst = first"
-        class="list-group-item" 
+        class="list-group-item d-flex justify-content-between align-items-center" 
         [ngClass]="{ 'list-group-item-success' : isLast,'list-group-item-primary' : isFirst }">  
-        
+
+        <div>
+
          <span class="text-primary">{{i + 1 }}</span>
        <span> Nombre:</span> <Strong>{{employ.nombre}} </Strong> |
        <span> Sector: </span> <Strong>{{employ.sector}} </Strong> |
        <span>DNI:</span><Strong>{{employ.dni}}</Strong>
 
-      </li>
+      </div>
 
+       <button class="btn btn-danger flex justify-between" (click)="deleteEmployById(employ.id)">X</button>
+
+      </li>
     </ul>
+
+  </ng-template>
